@@ -30,3 +30,6 @@ class Name(models.Model):
     name = models.CharField(max_length=50)
     reference = models.CharField(max_length=150)
     hash_1 = models.CharField(max_length=30, default=_createHash, unique=True)
+
+    def __unicode__(self):
+        return self.name
